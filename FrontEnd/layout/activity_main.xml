@@ -7,12 +7,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/background">
 
-
-
-
-
-
-
     <!--employee email field-->
     <EditText
         android:id="@+id/email"
@@ -78,19 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.389" />
 
-
-
-
-
-    <!--Startscreen Employee logo-->
-
-
-    <!--Employee login text-->
-
-
-    <!--switch to Admin-->
-
-    <!--login button-->
+   <!--login button-->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -111,7 +93,7 @@
         app:layout_constraintVertical_bias="0.794" />
 
 
-
+ <!--Startscreen Employee logo-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -131,6 +113,7 @@
         app:layout_constraintVertical_bias="0.07"
         app:srcCompat="@drawable/logo" />
 
+     <!--Employee login text-->
     <TextView
         android:id="@+id/category"
         android:layout_width="wrap_content"
