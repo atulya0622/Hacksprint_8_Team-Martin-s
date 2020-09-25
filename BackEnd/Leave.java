@@ -34,11 +34,11 @@ public class Leave extends AppCompatActivity implements View.OnClickListener {
         fDate = fromDate.getText().toString() ;
         tDate = toDate.getText().toString();
         rea = reason.getText().toString();
-
+        //Checks if from date is filled
         if(fDate.isEmpty()){
             fromDate.setError("Please enter a From date");
         }
-
+        //Checks if to date is filled
         else if(tDate.isEmpty()){
             toDate.setError("Please enter a To date");
         }
