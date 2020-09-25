@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                //start authentication of the entered fields
+                
                 else {
-                    openMainActivity();
+                    openMainActivity();      //calls openMainActivity() method
                 }
 
 
@@ -79,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainScreenActivity.class);
         startActivity(intent);
     }
-
+    
+    //Opens up Help Page
     public void openHelpActivity(View view){
         Intent intent = new Intent(this,help.class) ;
         startActivity(intent);
@@ -96,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent2 = new Intent(this, MainActivity.class) ;
         startActivity(intent2);
     }
-
-
+     
+    //Opens up Employee details Page
     public void openUpdateActivity(View view){
         Intent intent3 = new Intent(this,details.class) ;
         startActivity(intent3);
