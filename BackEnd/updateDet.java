@@ -18,6 +18,7 @@ public class updateDet extends AppCompatActivity {
 
     }
 
+    //Redirects to Main Screen  
     public void updateActivity(View view){
         Intent intent = new Intent(this,MainScreenActivity.class) ;
         startActivity(intent);
