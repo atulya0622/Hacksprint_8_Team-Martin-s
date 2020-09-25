@@ -16,12 +16,13 @@ public class details extends AppCompatActivity {
 
     }
 
-
+    //Redirects to Main Screen
     public void updateActivity(View view){
         Intent intent = new Intent(this,MainScreenActivity.class) ;
         startActivity(intent);
     }
 
+    //Redirects to Update details Screen
     public void openUpdateActivity(View view) {
         Intent intent3 = new Intent(this,updateDet.class) ;
         startActivity(intent3);
