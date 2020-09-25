@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".details">
 
+    <!--Header-->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -31,6 +32,8 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    
+    <!--Profile Image-->
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="190dp"
@@ -55,6 +58,7 @@
         app:layout_constraintVertical_bias="0.484" />
 
 
+    <!--Name Textbox-->
     <TextView
         android:id="@+id/Name"
         android:layout_width="wrap_content"
@@ -96,6 +100,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.556" />
 
+    <!--Eid Textbox-->
     <TextView
         android:id="@+id/Eid"
         android:layout_width="wrap_content"
@@ -137,7 +142,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.625" />
 
-
+<!--Phone Textbox-->
     <TextView
         android:id="@+id/phone"
         android:layout_width="wrap_content"
@@ -179,6 +184,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.693" />
 
+     <!--Email Textbox-->
     <TextView
         android:id="@+id/mail"
         android:layout_width="wrap_content"
@@ -209,6 +215,8 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.695" />
 
+    
+    <!--Update Button-->
     <Button
         android:id="@+id/update"
         android:layout_width="117dp"
