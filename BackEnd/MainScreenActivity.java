@@ -40,6 +40,7 @@ public class MainScreenActivity extends AppCompatActivity {
         startActivity(intent2);
     }
 
+    //Method to open Employee details page
     public void openUpdateActivity(View view){
         Intent intent3 = new Intent(this,details.class) ;
         startActivity(intent3);
