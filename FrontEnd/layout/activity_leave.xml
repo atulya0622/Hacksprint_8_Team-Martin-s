@@ -99,7 +99,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.359" />
 
-    <!--Input field to enter the reason-->
+    
 
     <!--Submit button-->
 
@@ -172,6 +172,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.581" />
 
+    <!--Input field to enter the reason-->
     <EditText
         android:id="@+id/Rea"
         android:layout_width="303dp"
