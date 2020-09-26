@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSignUp;
     TextView textView;
 
-
+    FirebaseAuth mAuth ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.button);
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                
+                mAuth = FirebaseAuth.getInstance() ;
                 String email = emailId.getText().toString();
                 String pwd = password.getText().toString();
 
@@ -58,11 +59,23 @@ public class MainActivity extends AppCompatActivity {
 
                 
                 else {
-                    openMainActivity();      //calls openMainActivity() method
-                }
+                     mAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful())
+                                {
+                                    openMainActivity();
+                                }
 
-
+                                else{
+                                    Toast.makeText(MainActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+                    }
+                
             }
+                
         });
 
 
@@ -94,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Method to logout the current user
     public void openLogoutActivity(View view){
+        FirebaseAuth.getInstance().signOut();
         Intent intent2 = new Intent(this, MainActivity.class) ;
         startActivity(intent2);
     }
@@ -104,7 +118,26 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent3);
     }
 
+     public void toastMsg(View view) {
 
+        Toast.makeText(MainActivity.this, "You Have No Current Tasks",Toast.LENGTH_LONG).show();
+    }
+
+
+    public void toastGal(View view) {
+
+        Toast.makeText(MainActivity.this, "COMING SOON !!!!!",Toast.LENGTH_LONG).show();
+    }
+
+    public void openEmpLogin(View view){
+        Intent intent4 = new Intent(this,MainActivity.class) ;
+        startActivity(intent4);
+    }
+
+    public void openAdmLogin(View view){
+        Intent intent5 = new Intent(this,admin.class) ;
+        startActivity(intent5);
+    }
 }
 
 
