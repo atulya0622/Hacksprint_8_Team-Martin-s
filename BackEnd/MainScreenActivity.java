@@ -36,6 +36,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     //Method to logout the current user
     public void openLogoutActivity(View view){
+        FirebaseAuth.getInstance().signOut();
         Intent intent2 = new Intent(this, MainActivity.class) ;
         startActivity(intent2);
     }
@@ -44,6 +45,10 @@ public class MainScreenActivity extends AppCompatActivity {
     public void openUpdateActivity(View view){
         Intent intent3 = new Intent(this,details.class) ;
         startActivity(intent3);
+    }
+    
+      public void toastMsg(View view){
+        Toast.makeText(MainScreenActivity.this, "You Have No Current Tasks",Toast.LENGTH_LONG).show();
     }
 
 
